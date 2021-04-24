@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+  <title>Document</title>
+<script defer src="index.js"></script><link href="main.css" rel="stylesheet"></head>
+<body>
+  <div class="site-container">
+    <section class="forms">
+      <div class="forms__container container">
+        <h1 class="forms__head">FTL: Прямая машина</h1>
+        <form class="forms__form form">
+          <div class="form__route route">
+            <div class="route__head">
+              <span class="route__span span-number">1</span>
+              <h2 class="route__span head">Маршрут</h2>
+            </div>
+            <div class="route__inputs-wrap">
+              <div class="route__from-content inputs-content">
+                <label for="input-from" class="route-label label">Откуда</label>
+                <input class="route_input inputs" id="input-from" type="text">
+              </div>
+              <div class="route__where-content inputs-content">
+                <label for="input-where" class="route-input-where label">Куда</label>
+                <input class="route_input inputs" id="input-where" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="form__transport transport">
+            <div class="transport__head">
+              <span class="transport__span span-number">2</span>
+              <h2 class="transport__span head">Транспорт</h2>
+            </div>
+            <div class="transport__inputs-wrap row">
+              <div class="transport__weight-content">
+                <label for="select-weight" class="transport__label label">Грузоподьемность</label>
+
+                <select class="transport__select-weight" id="select-weight">
+                  <option value="">Не выбрана</option>
+                  <option class="transport__option option" value="1">Вариант-2</option>
+                  <option class="transport__option option" value="2">Вариант-3</option>
+                  <option class="transport__option option" value="3">Вариант-4</option>
+                  <option class="transport__option option" value="4">Вариант-5</option>
+                </select>
+              </div>
+              <div class="transport__method-content">
+                <label  for="select-method" class="transport__label label">Способ погрузки</label>
+
+                <select class="transport__select-method" id="select-method">
+                  <option value="">Не выбрана</option>
+                  <option class="transport__option option" value="2">Задняя</option>
+                  <option class="transport__option option" value="3">Без погрузки</option>
+                  <option class="transport__option option" value="4">Не грузили</option>
+                  <option class="transport__option option" value="5">Перегружен</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form__cargo cargo">
+            <div class="cargo__head">
+              <span class="cargo__span span-number">3</span>
+              <h2 class="cargo__span head">Груз</h2>
+            </div>
+            <div class="cargo__inputs-wrap">
+              <div class="cargo__type-content">
+                <label for="select-type" class="cargo__label label">Тип груза</label>
+                <select class="cargo__select-type inputs" id="select-type">
+                  <option value="">Не выбрана</option>
+                  <option class="cargo__option option" value="2">Очень длинный вариант</option>
+                  <option class="cargo__option option" value="4">Вариант-3</option>
+                  <option class="cargo__option option" value="5">Вариант-4</option>
+                  <option class="cargo__option option" value="6">Вариант-5</option>
+                </select>
+              </div>
+                <div class="cargo__info-content">
+                  <div class="cargo__danger-block">
+                    <label  for="select-danger" class="cargo__label label">Класс опасности</label>
+                    <select class="cargo__select-danger inputs" id="select-danger">
+                      <option value="">Не выбрана</option>
+                      <option class="cargo__option option" value="1">Класс 5 — Окисляющие вещества и органические перекиси
+                      </option>
+                      <option class="cargo__option option" value="2">Очень длинный вариант</option>
+                    </select>
+                  </div>
+                  <div class="cargo__valuation-block">
+                    <label  for="input-valuation" class="cargo__label label">Объявленная ценность, &#8381;</label>
+                    <input class="cargo__input-valuation inputs" autocomplete="off" type="text" id="input-valuation" placeholder="&ge; 1">
+                  </div>
+                </div>
+                <div class="cargo__checkbox-content js-checkbox-container row">
+                  <input class="cargo__input-checkbox" type="checkbox" id="input-checkbox">
+                  <label  for="input-checkbox" class="checkbox__label label">Требуется температурный режим</label>
+              </div>
+              <div class="cargo__temperature-content hide row js-temperature">
+                <div class="cargo__temperature-block">
+                  <label  for="input-temperature-from" class="cargo__label label">От, &#8451;</label>
+                  <input class="cargo__input-temperature-from inputs" autocomplete="off" type="text" placeholder="-20" id="input-temperature-from">
+                </div>
+                <div class="cargo__temperature-block">
+                  <label  for="input-temperature-to" class="cargo__label label">До, &#8451;</label>
+                  <input class="cargo__input-temperature-to inputs" autocomplete="off" type="text" placeholder="+23" id="input-temperature-to">
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="form__time time column">
+            <div class="time__head">
+              <span class="time__span span-number">4</span>
+              <h2 class="time__span head">Время</h2>
+            </div>
+            <div class="time__radio-content">
+              <div class="time__radio-head">
+                <span class="time__radio-discript label">Когда прибыть на точку</span>
+                <span class="time__radio-discript label">700 км в день</span>
+              </div>
+              <div class="time__radio-block inputs">
+                <input class="time__radio-radioBtn" name="time-radio" id="radio-adress-1" value="1" type="radio">
+                <label for ="radio-adress-1" class="time__label label" aria-label="Адрес не указан" title="Адрес не указан">Длинный адрес с градиентом</label>
+                <span class="time__status_disabled" data-active="Выбрано">НЕ ВЫБРАНО</span>
+              </div>
+              <div class="time__radio-block inputs">
+                <input class="time__radio-radioBtn" name="time-radio" id="radio-adress-2" value="2" type="radio">
+                <label for ="radio-adress-2" class="time__label label" aria-label="Адрес не указан" title="Адрес не указан">Адрес не указан</label>
+                <span class="time__status_disabled" data-active="Выбрано">НЕ ВЫБРАНО</span>
+              </div>
+            </div>
+            <div class="time__comments-content column">
+              <label for ="text-comments" class="comment__label label">Комментарии к заказу</label>
+              <textarea 
+              class="time__comments" 
+              id="text-comments" 
+              placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="message">
+        <span class="message__discript">Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
